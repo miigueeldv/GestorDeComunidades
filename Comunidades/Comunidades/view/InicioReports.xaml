@@ -1,0 +1,18 @@
+﻿<Page x:Class="Comunidades.view.InicioReports"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Comunidades.view"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="InicioReports">
+
+    <Grid Background="#FF0C0B3A">
+        <Button Content="Informe de pisos" Name="informe" HorizontalAlignment="Left" Margin="146,185,0,0" VerticalAlignment="Top" Height="26" Width="117" Click="informe_Click"/>
+        <Button Content="Dependencias" Name="dependecias" HorizontalAlignment="Left" Margin="496,185,0,0" VerticalAlignment="Top" Height="26" Width="117" Click="dependecias_Click"/>
+        <TextBox HorizontalAlignment="Left" Name="comunidad" Margin="143,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" PreviewTextInput="TextBox_PreviewTextInput"/>
+        <Label Content="Introduce el id comunidad" Foreground="White" HorizontalAlignment="Left" Margin="146,76,0,0" VerticalAlignment="Top" Width="158"/>
+        <Frame Name="VerInformePisos" NavigationUIVisibility="Hidden" Margin="0,-11,0,10" RenderTransformOrigin="0.5,0.5"/>
+    </Grid>
+</Page>

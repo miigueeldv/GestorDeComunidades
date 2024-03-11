@@ -1,0 +1,50 @@
+﻿<Page x:Class="Comunidades.view.PaginaComunidad"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Comunidades.view"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PaginaComunidad">
+
+    <Grid Background="#FF0C0B3A">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Height="353" Width="409" Margin="0,51,0,0">
+            <TextBlock Text="Nombre de la Comunidad:" Margin="0,0,0,10" Foreground="White"/>
+            <TextBox x:Name="NombreComunidadTextBox" Width="200" Margin="0,0,0,10" />
+            <TextBlock Text="Dirección:" Margin="0,0,0,10" Foreground="White"/>
+            <TextBox x:Name="DireccionTextBox" Width="200" Margin="0,0,0,10"/>
+            <TextBlock Text="Fecha de Creación:" Margin="0,0,0,10" Foreground="White"/>
+            <DatePicker x:Name="FechaCreacionDatePicker" Width="200" Margin="0,0,0,10" />
+            <TextBlock Text="Metros Cuadrados:" Margin="0,0,0,10" Foreground="White"/>
+            <TextBox x:Name="MetrosCuadradosTextBox" Width="200" Margin="0,0,0,10" PreviewTextInput="MetrosCuadradosTextBox_PreviewTextInput"/>
+            <CheckBox x:Name="PiscinaCheckBox" Content="Tiene Piscina" Margin="0,0,0,10" Foreground="White"/>
+            <TextBlock Text="Nº Portales" Foreground="White"/>
+            <TextBox x:Name="NumPortales" Width="200" PreviewTextInput="MetrosCuadradosTextBox_PreviewTextInput"/>
+            <Separator Background="Transparent"/>
+            <Separator Background="Transparent"/>
+            <Separator Background="Transparent"/>
+            <Button Content="ACEPTAR" Click="Button_Click" Foreground="White">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#462AD8"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#462AD8"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="150" Height="40" 
+                CornerRadius="20"
+                Background="#462AD8">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
